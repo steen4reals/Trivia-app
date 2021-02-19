@@ -21,10 +21,14 @@ function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
   const data = useFetch();
 
-  if (!data || !data[state]) {
+  if (!data) {
     console.log(`This is in IF STMT: ${data}`);
     console.log(state)
     return <h1>...Loading</h1>;
+  }
+
+  if (state>=data.length){
+   return<h2>Game is over</h2>
   }
 
   console.log(`This is in app: ${data[0]}`);
