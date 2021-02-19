@@ -1,5 +1,5 @@
-function Screen() {
-  return <div></div>;
+function Screen({question}) {
+  return <div>{question}</div>;
 }
 
 export default Screen;
