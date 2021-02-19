@@ -1,11 +1,17 @@
 import "./App.css";
 import Screen from "../Screen/index";
 import { useEffect } from "react";
+import Button from "../Button";
 
 function App() {
   useEffect(() => {
-    fetch(process.env.REACT_APP_API_URL);
-  });
+    async function getData(){
+      const response = await fetch(process.env.REACT_APP_API_URL);
+      const data = await response.json()
+      console.log(data);
+    }
+  getData()
+  },[]);
 
   return (
     <div className="App">
