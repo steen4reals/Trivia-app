@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 function useFetch(params) {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState([{question:""}]);
 
   useEffect(() => {
     async function getData() {
