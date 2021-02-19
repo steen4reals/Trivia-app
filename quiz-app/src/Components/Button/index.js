@@ -1,8 +1,7 @@
-import {useState} from 'react';
+import { useState } from "react";
 
-function Button(){
-
-    
+function Button() {
+  return <button></button>;
 }
 
 export default Button;

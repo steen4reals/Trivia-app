@@ -1,17 +1,20 @@
-// comps 
+## comps
+
 button
 screen
-timer 
-game over / win 
+timer
+game over / win
 
-// must haves
+## must haves
+
 use reducer
 use effect
-unit test (check app renders on page) 
+unit test (check app renders on page)
 
-// css plan 
+## css plan
 
-// game logic 
+## game logic
+
 win state/loss state
 correct answer/ incorrect answer
 timeout
