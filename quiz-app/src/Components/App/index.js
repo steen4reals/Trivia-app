@@ -4,28 +4,30 @@ import { useEffect, useState, useReducer } from "react";
 import Button from "../Button";
 import useFetch from "../../hooks/useFetch";
 
-const initialState = {index: 0};
-function App() {
-  function reducer(state, action) {
-    switch (action.type) {
-      case true:
-        return state.index + 1;
-      case false:
-        return state.index - 1;
-      default:
-        return state.index;
-    }
-  }
+const initialState = {index: 0, data: []};
 
-  const [state, dispatch] = useReducer(reducer, initialState);
+function reducer(state, action) {
+  switch (action.type) {
+    case "true":
+      return state.index + 1;
+    case "false":
+      return state.index - 1;
+    default:
+      return state.index;
+  }
+}
+
+function App() {
   const data = useFetch();
+  
+  const [state, dispatch] = useReducer(reducer, initialState);
   return (
     <div className="App">
       <h1>Trials of Mt. Olympus</h1>
-      <Screen question={data[index].question} />
+      <Screen question={data[0].question} />
       <div className="button-container">
-        <Button text="True" value={true}/>
-        <Button text="False" value={false}/>
+        <Button value={"true"} dispatch={dispatch}/>
+        <Button value={"false"} dispatch={dispatch}/>
       </div>
     </div>
   );
