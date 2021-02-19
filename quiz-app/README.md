@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# Fetch Hackathon
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Today we will be using our new found React skills to make apps that request data from a server.
 
-## Available Scripts
+## Step 1 - Getting data and brainstorming (20 - 30 mins)
 
-In the project directory, you can run:
+Here are some APIs that we have previously used. All but the dad jokes one simply need the url. Each api has documentation on how to ask for different data by changing the url. We have included a example fetch for each of them, just to jog your memory. You do not have to use these if you would prefer to find your own.
 
-### `npm start`
+👉 Visit the documentation for the APIs, request some data and see what you get back. From there, brainstorm what you could make with your knowledge of JavaScript, the DOM and the data you have received.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Star Wars API
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- [Star Wars API](https://swapi.dev/)
 
-### `npm test`
+```js
+// fetch the first star wars character
+fetch("https://swapi.dev/api/people/1");
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Pokemon API
 
-### `npm run build`
+- [Pokemon API](https://pokeapi.co/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```js
+// fetch the first pokemon
+fetch("https://pokeapi.co/api/v2/pokemon/1/");
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Trivia API
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [Trivia API](https://opentdb.com/api_config.php)
 
-### `npm run eject`
+```js
+// fetch 10 random questions
+fetch("https://opentdb.com/api.php?amount=10");
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Dad Jokes API
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- [Dad Jokes API](https://icanhazdadjoke.com/api)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```js
+// fetch a dad joke
+fetch("https://icanhazdadjoke.com/", {
+  headers: { accept: "application/json" },
+});
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Step 2 - Break down the problem (20 - 30 mins)
 
-## Learn More
+Now that you have got an idea of what data you are working with and have come up with an idea of what you could achieve, use Disney Ideation to flesh out your ideas and then break them down into smaller chunks. Keep breaking the problem down until you can translate your plan into code. You should dream big, break it down and start small. If your plan turns out to be overly ambitious, then be smart and reign it in. If you have been too conservative then try and push yourself.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Step 3 - Build (The rest of the day!)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Translate your plan into code, turn your ideas into reality. We would like you to include:
 
-### Code Splitting
+- useEffect
+- useReducer
+- At least one unit test.
+- The app should be hosted on Netlify at the end of the day.
+- Bonus: if you have time, try to include a custom hook as well!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Enjoy!
