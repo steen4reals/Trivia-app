@@ -41,6 +41,7 @@ function App() {
   return (
     <div className="App">
       <h1>Trials of Mt. Olympus</h1>
+      <p className="scoreBox">Score: {state.score}</p>
       <Screen question={data[state.index].question} />
       <div className="button-container">
         <Button
