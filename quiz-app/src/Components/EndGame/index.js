@@ -1,6 +1,6 @@
 function EndGame({ score }) {
   return (
-    <div>
+    <div className="App">
       <h1>Game Over</h1>
       <p>Your score is {score}</p>
     </div>

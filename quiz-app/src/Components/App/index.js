@@ -30,7 +30,7 @@ function App() {
   if (!data) {
     console.log(`This is in IF STMT: ${data}`);
     console.log(state);
-    return <h1>...Loading</h1>;
+    return <h1 className="App">...Loading</h1>;
   }
 
   if (state.index >= data.length) {
