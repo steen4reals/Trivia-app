@@ -6,15 +6,14 @@ import useFetch from "../../hooks/useFetch";
 
 function App() {
   //intial states
-  const [index, setIndex] = useState(0);
+  // const [index, setIndex] = useState(0);
   //get 10 Qs on mount
 
-  const data = useFetch();
-
+  const [data, getNextData] = useFetch();
   return (
     <div className="App">
       <h1>Trials of Mt. Olympus</h1>
-      <Screen question={data[0].question} />
+      <Screen question={data.question} />
       <div className="button-container">
         <Button text= "True"/>
         <Button text ="False"/>
