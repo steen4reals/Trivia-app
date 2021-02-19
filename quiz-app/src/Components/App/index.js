@@ -9,6 +9,8 @@ function App() {
       const response = await fetch(process.env.REACT_APP_API_URL);
       const data = await response.json()
       console.log(data);
+      console.log(data.results[0].question);
+      console.log(data.results[0].correct_answer);
     }
   getData()
   },[]);
