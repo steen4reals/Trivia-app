@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-function Button({text}) {
-  return <button>{text}</button>;
+function Button({value, text}) {
+  return <button onClick={() => dispatch({type: value})} >{text}</button>;
 }
 
 export default Button;

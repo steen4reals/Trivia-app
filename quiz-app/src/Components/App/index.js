@@ -7,9 +7,9 @@ import useFetch from "../../hooks/useFetch";
 function App() {
   function reducer(state, action) {
     switch (action.type) {
-      case "True":
+      case true:
         return index + 1;
-      case "False":
+      case false:
         return index - 1;
       default:
         return state;
@@ -23,8 +23,8 @@ function App() {
       <h1>Trials of Mt. Olympus</h1>
       <Screen question={data.question} />
       <div className="button-container">
-        <Button text="True" onClick={() => dispatch((type: "True"))} />
-        <Button text="False" onClick={() => dispatch((type: "False"))} />
+        <Button text="True" value={true}/>
+        <Button text="False" value={false}/>
       </div>
     </div>
   );
