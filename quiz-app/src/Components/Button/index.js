@@ -1,5 +1,5 @@
-function Button({ value, dispatch }) {
-	return <button onClick={() => dispatch({ type: value })}>{value}</button>;
+function Button({ value, dispatch, correctAnswer }) {
+	return <button onClick={() => dispatch({ type: value, correctAnswer: correctAnswer, givenAnswer: value})}>{value}</button>;
 }
 
 export default Button;
