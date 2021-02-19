@@ -14,10 +14,10 @@ function App() {
   return (
     <div className="App">
       <h1>Trials of Mt. Olympus</h1>
-      <Screen question={"hello"} />
+      <Screen question={data[0].question} />
       <div className="button-container">
-        <Button>True</Button>
-        <Button>False</Button>
+        <Button text= "True"/>
+        <Button text ="False"/>
       </div>
     </div>
   );

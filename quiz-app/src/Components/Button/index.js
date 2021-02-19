@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-function Button() {
-  return <button></button>;
+function Button({text}) {
+  return <button>{text}</button>;
 }
 
 export default Button;
